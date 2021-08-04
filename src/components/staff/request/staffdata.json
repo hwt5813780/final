@@ -1,0 +1,37 @@
+[{
+  "key": 0,
+  "id": "P001",
+  "profile": "https://i.loli.net/2021/08/02/FQ7qIvkDwSodHph.png",
+  "name": "Captain America",
+  "position": "Purchaser",
+  "phone": "7534 457 654",
+  "email": "ej23@gmail.com",
+  "purchase quantity": "122",
+  "purchase cost": "12234.45",
+  "sale quantity": "",
+  "sale value": ""
+},{
+  "key": 1,
+  "id": "S002",
+  "profile": "https://i.loli.net/2021/08/02/XudOsjCH3DiSTla.jpg",
+  "name": "Iron Man",
+  "position": "Salesman",
+  "phone": "7233 452 254",
+  "email": "ergsw@gmail.com",
+  "purchase quantity": "",
+  "purchase cost": "",
+  "sale quantity": "232",
+  "sale value": "42234.45"
+},{
+  "key": 2,
+  "id": "S003",
+  "profile": "https://i.loli.net/2021/08/02/vDIiMVThUoSyeba.jpg",
+  "name": "Thor",
+  "position": "Salesman",
+  "phone": "7623 152 153",
+  "email": "ererererer@gmail.com",
+  "purchase quantity": "",
+  "purchase cost": "",
+  "sale quantity": "132",
+  "sale value": "22234.45"
+}]

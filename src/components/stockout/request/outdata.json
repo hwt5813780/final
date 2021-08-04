@@ -1,0 +1,37 @@
+[{
+  "key": 0,
+  "id": "A15314",
+  "make": "Volvo",
+  "model": "XC60",
+  "staff": "Iron Man",
+  "cost price": "18.15",
+  "selling price": "22.23",
+  "market price": "23.65",
+  "profit": "4.08",
+  "extra info": "This car will not be on sale for 7 days.",
+  "date": "07-07-2021"
+},{
+  "key": 1,
+  "id": "A12312",
+  "make": "Audi",
+  "model": "A4",
+  "staff": "Thor",
+  "cost price": "18.23",
+  "selling price": "22.12",
+  "market price": "21.43",
+  "profit": "3.89",
+  "extra info": "This car owner said this car is not a proper one.",
+  "date": "07-07-2021"
+},{
+  "key": 2,
+  "id": "A15314",
+  "make": "BMW",
+  "model": "3 Series",
+  "staff": "Thor",
+  "cost price": "20.01",
+  "selling price": "23.11",
+  "market price": "26.5",
+  "profit": "3.1",
+  "extra info": "Some parts of the car have been broken.",
+  "date": "07-07-2021"
+}]
