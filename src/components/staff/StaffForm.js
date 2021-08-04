@@ -1,5 +1,19 @@
 import React, { Component } from 'react';
-import { Icon,Modal, Upload, message, Form, Input, Radio, InputNumber, Button, Cascader, Select, AutoComplete } from 'antd';
+import { LoadingOutlined, UploadOutlined } from '@ant-design/icons';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import {
+    Modal,
+    Upload,
+    message,
+    Input,
+    Radio,
+    InputNumber,
+    Button,
+    Cascader,
+    Select,
+    AutoComplete,
+} from 'antd';
 import axios from 'axios';
 
 const FormItem = Form.Item;
@@ -50,7 +64,7 @@ class Avatar extends React.Component {
         const { loading, imageUrl } = this.state;
         const uploadButton = (
             <div>
-                {loading ? <Icon type="loading" /> : <Icon type="upload" />}
+                {loading ? <LoadingOutlined /> : <UploadOutlined />}
                 <div style={{ marginTop: 8 }}>Upload</div>
             </div>
         );
@@ -94,10 +108,7 @@ class CustomizedForm extends Component{
             labelCol: { span: 5 },
             wrapperCol: { span: 18 },
         };
-        const FormItemLayout2 = {
-            labelCol: { span: 5 },
-            wrapperCol: { span: 19 },
-        };
+
         const websiteOptions = autoCompleteResult.map(website => (
             <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
         ));

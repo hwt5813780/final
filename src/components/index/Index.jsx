@@ -1,6 +1,7 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
 import BreadcrumbCustom from '../common/BreadcrumbCustom';
-import { Card, Avatar, Row, Col, Button, Statistic, Table, Icon } from 'antd';
+import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
+import { Card, Avatar, Space,Row, Col, Button, Statistic, Table } from 'antd';
 import zysoft from '../../style/img/avatar.jpg';
 import './index.less';
 import CountUp from 'react-countup';
@@ -130,7 +131,7 @@ export default class MIndex extends Component {
         let TCount = ["21","19","412.25","612.43"];
         let YCount = ["17","23","334.12","432.52"];
         let cu = today.map(function(item,index){
-            return(
+            return (
                 <Col md={6} key={item}>
                     <Card bordered={false} style={{Height:182,marginBottom:24 }}>
                         <Row gutter={16} style={{marginBottom:24}}>
@@ -149,7 +150,7 @@ export default class MIndex extends Component {
                                     value={11.28}
                                     precision={2}
                                     valueStyle={{ color: '#479200',fontSize:14}}
-                                    prefix={<Icon type="arrow-up" />}
+                                    prefix={<ArrowUpOutlined />}
                                     suffix="%"
                                 />
                             </Col>
@@ -159,14 +160,14 @@ export default class MIndex extends Component {
                                     value={-3.28}
                                     precision={2}
                                     valueStyle={{ color: '#a81919',fontSize:14 }}
-                                    prefix={<Icon type="arrow-down" />}
+                                    prefix={<ArrowDownOutlined />}
                                     suffix="%"
                                 />
                             </Col>
                         </Row>
                     </Card>
                 </Col>
-            )
+            );
         });
         return cu;
     }
@@ -349,15 +350,9 @@ export default class MIndex extends Component {
                     <Row>
                         <Col md={24}>
                             <Card bordered={false}>
-                                <Row>
-                                    <div style={{display:"flex",marginBottom:'20px',float: "right"}}>
-                                        <Button size="large" type="primary" onClick={this.CreateItem} >Post Message</Button>
-                                    </div>
-                                    <div >
-                                        <h3>Message board</h3>
-                                    </div>
-                                </Row>
-                                <Row>
+                                <space style={{fontSize:18,fontWeight:'normal'}} >Message board
+                                    <Button style={{marginBottom:24,marginLeft:24}} size="large" type="primary" onClick={this.CreateItem} >Post Message</Button></space>
+
                                     <FormTable
                                         dataSource={data}
                                         pagination = {false}
@@ -369,7 +364,6 @@ export default class MIndex extends Component {
                                         <CreateMessageForm ref={this.saveFormRef} visible={visible} onCancel={this.handleCancel} onCreate={this.handleUpdate} title="Edit Used Car" okText="Complete"
                                         /> : <CreateMessageForm ref={this.saveFormRef} visible={visible} onCancel={this.handleCancel} onCreate={this.handleCreate} title="New Message" okText="Post"
                                         />}
-                                </Row>
                             </Card>
                         </Col>
                     </Row>

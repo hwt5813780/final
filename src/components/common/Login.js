@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../../style/login.less';
-import { Form, Icon, Input, Button, Checkbox, message, Spin } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Input, Button, Checkbox, message, Spin } from 'antd';
 const FormItem = Form.Item;
 
 const login = [{
@@ -20,7 +22,7 @@ function PatchUser(values) {  //匹配用户
         }
     });
     return results.includes(1);
-};
+}
 
 class NormalLoginForm extends Component {
     state = {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Tag, Space, Icon, Popconfirm } from 'antd';
+import { Table, Tag, Space, Popconfirm } from 'antd';
 import moment from 'moment';
 
 export default class InTable extends Component{
@@ -17,33 +17,28 @@ export default class InTable extends Component{
         const columns = [
             {
             title: 'Profile',
-            width: 50,
             dataIndex: 'profile',
+            width: 50,
             },
             {
             title: 'Name',
-            width: 80,
             dataIndex: 'name',
             },
             {
             title: 'Written',
-            width: 300,
             dataIndex: 'written',
             },
             {
             title: 'Phone',
             dataIndex: 'phone',
-            width: 80,
             },
             {
             title: 'Mail',
             dataIndex: 'mail',
-            width: 150,
             },
             {
             title: 'Time',
             dataIndex: 'time',
-            width: 100,
             }
             ];
 

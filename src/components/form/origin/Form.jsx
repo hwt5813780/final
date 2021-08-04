@@ -4,7 +4,15 @@ import './form.less';
 import axios from 'axios';
 import Mock from 'mockjs';
 import moment from 'moment';
-import { Row, Col, Input, Icon, Cascader, DatePicker, Button, Tooltip, Popconfirm } from 'antd';
+
+import {
+    MinusCircleOutlined,
+    PlusCircleOutlined,
+    QuestionCircleOutlined,
+    UserOutlined,
+} from '@ant-design/icons';
+
+import { Row, Col, Input, Cascader, DatePicker, Button, Tooltip, Popconfirm } from 'antd';
 
 import BreadcrumbCustom from '../common/BreadcrumbCustom';
 import address from './request/address.json';
@@ -273,12 +281,12 @@ export default class UForm extends Component{
         const questiontxt = ()=>{
             return (
                 <p>
-                    <Icon type="plus-circle-o" /> : 新建信息<br/>
-                    <Icon type="minus-circle-o" /> : 批量删除
+                    <PlusCircleOutlined /> : 新建信息<br/>
+                    <MinusCircleOutlined /> : 批量删除
                 </p>
-            )
+            );
         };
-        return(
+        return (
             <div>
                 <BreadcrumbCustom paths={['首页','表单']}/>
                 <div className='formBody'>
@@ -286,7 +294,7 @@ export default class UForm extends Component{
                         <Col className="gutter-row" sm={8}>
                             <Search
                                 placeholder="Input Name"
-                                prefix={<Icon type="user" />}
+                                prefix={<UserOutlined />}
                                 value={userName}
                                 onChange={this.onChangeUserName}
                                 onSearch={this.onSearchUserName}
@@ -303,16 +311,16 @@ export default class UForm extends Component{
                     </Row>
                     <Row gutter={16}>
                         <div className='plus' onClick={this.CreateItem}>
-                            <Icon type="plus-circle" />
+                            <PlusCircleOutlined />
                         </div>
                         <div className='minus'>
                             <Popconfirm title="确定要批量删除吗?" onConfirm={this.MinusClick}>
-                                <Icon type="minus-circle" />
+                                <MinusCircleOutlined />
                             </Popconfirm>
                         </div>
                         <div className='question'>
                             <Tooltip placement="right" title={questiontxt}>
-                                <Icon type="question-circle" />
+                                <QuestionCircleOutlined />
                             </Tooltip>
                         </div>
                         <div className='btnOpera'>
@@ -333,6 +341,6 @@ export default class UForm extends Component{
                     />}
                 </div>
             </div>
-        )
+        );
     }
 }

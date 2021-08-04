@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Table, Icon, Button,Input } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
+import { Table, Button, Input } from 'antd';
 import moment from 'moment';
 
 export default class FormTable extends Component{
@@ -26,7 +27,7 @@ export default class FormTable extends Component{
                     <Button
                         type="primary"
                         onClick={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
-                        icon={<Icon type="search" />}
+                        icon={<SearchOutlined />}
                         size="small"
                         style={{ width: 90 }}
                     >
@@ -51,7 +52,7 @@ export default class FormTable extends Component{
                 </div>
             </div>
         ),
-        filterIcon: filtered =><Icon type="search" style={{ color: filtered ? '#1890ff' : undefined }} />,
+        filterIcon: filtered =><SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />,
         onFilter: (value, record) =>
             record[dataIndex]
                 ? record[dataIndex].toString().toLowerCase().includes(value.toLowerCase())

@@ -1,5 +1,18 @@
 import React, { Component } from 'react';
-import { Modal, Upload, message, Form, Input, Radio, InputNumber, Button, Cascader, Select, AutoComplete } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import {
+    Modal,
+    Upload,
+    message,
+    Input,
+    Radio,
+    InputNumber,
+    Button,
+    Cascader,
+    Select,
+    AutoComplete,
+} from 'antd';
 import axios from 'axios';
 
 const FormItem = Form.Item;

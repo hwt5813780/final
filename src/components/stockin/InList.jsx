@@ -3,7 +3,7 @@ import './form.less';
 import axios from 'axios';
 import Mock from 'mockjs';
 import moment from 'moment';
-import { message, Row, Col, Input, Icon, DatePicker, Button, Tooltip, Popconfirm } from 'antd';
+import { message, Row, Col, Input, DatePicker, Button, Tooltip, Popconfirm } from 'antd';
 
 import BreadcrumbCustom from '../common/BreadcrumbCustom';
 import InData from './request/indata.json';

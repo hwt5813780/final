@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Table, Icon, Popconfirm } from 'antd';
+import { EditOutlined, MinusSquareOutlined } from '@ant-design/icons';
+import { Table, Popconfirm } from 'antd';
 import moment from 'moment';
 
 export default class FormTable extends Component{
@@ -60,9 +61,9 @@ export default class FormTable extends Component{
             render: (text, record) =>
                 <div className='opera'>
                     <span onClick={() => editClick(record.key)}>
-                         <Icon type="edit" /> 修改
+                         <EditOutlined /> 修改
                     </span><br />
-                    <span><Popconfirm title="确定要删除吗?" onConfirm={() => onDelete(record.key)}><Icon type="minus-square-o" /> 删除 </Popconfirm></span>
+                    <span><Popconfirm title="确定要删除吗?" onConfirm={() => onDelete(record.key)}><MinusSquareOutlined /> 删除 </Popconfirm></span>
                 </div>
         }];
         return(

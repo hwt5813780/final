@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Tag, Space, Icon, Popconfirm } from 'antd';
+import { Table, Tag, Space, Popconfirm } from 'antd';
 import moment from 'moment';
 
 export default class InTable extends Component{

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Layout, Icon, Menu, Badge } from 'antd';
+import { Icon as LegacyIcon } from '@ant-design/compatible';
+import { UserOutlined } from '@ant-design/icons';
+import { Layout, Menu, Badge } from 'antd';
 import { Link } from 'react-router-dom';
 import history from './history';
 
@@ -28,9 +30,9 @@ export default class HeaderCustom extends Component{
         history.push('/login');
     }
     render(){
-        return(
+        return (
             <Header style={{ Height: '48px', background: '#fff', padding: 0 }} className="header">
-                <Icon
+                <LegacyIcon
                 className="trigger"
                 type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
                 onClick={this.props.toggle}
@@ -41,7 +43,7 @@ export default class HeaderCustom extends Component{
                 >
                     <SubMenu 
                         title={<span>
-                            <Icon type="user" style={{fontSize:16, color: '#00aaff' }}/>{this.props.username}
+                            <UserOutlined style={{fontSize:16, color: '#00aaff' }} />{this.props.username}
                         </span>}
                         >
                         <Menu.Item key="logout" style={{textAlign:'center'}} className="logout">
@@ -50,6 +52,6 @@ export default class HeaderCustom extends Component{
                     </SubMenu>
                 </Menu>
             </Header>
-        )
+        );
     }
 } 
