@@ -250,5 +250,5 @@ class CustomizedForm extends Component{
     }
 }
 
-const CollectionCreateForm = CustomizedForm;
+const CollectionCreateForm = Form.create()(CustomizedForm);
 export default CollectionCreateForm;

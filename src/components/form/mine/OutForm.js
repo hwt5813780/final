@@ -89,5 +89,5 @@ class OutForm extends Component{
     }
 }
 
-const CreateOutForm = OutForm;
+const CreateOutForm = Form.create()(OutForm);
 export default CreateOutForm;

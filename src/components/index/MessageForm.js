@@ -48,5 +48,5 @@ class MessageForm extends Component{
     }
 }
 
-const CreateMessageForm = MessageForm;
+const CreateMessageForm = Form.create()(MessageForm);
 export default CreateMessageForm;

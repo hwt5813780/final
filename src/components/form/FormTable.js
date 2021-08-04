@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Table,Space, Button,Input } from 'antd';
+import { Table, Icon, Button,Input } from 'antd';
 import moment from 'moment';
-import Highlighter from 'react-highlight-words';
-import { SearchOutlined } from '@ant-design/icons';
 
 export default class FormTable extends Component{
     state = {
@@ -28,7 +26,7 @@ export default class FormTable extends Component{
                     <Button
                         type="primary"
                         onClick={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
-                        icon={<SearchOutlined />}
+                        icon={<Icon type="search" />}
                         size="small"
                         style={{ width: 90 }}
                     >
@@ -53,7 +51,7 @@ export default class FormTable extends Component{
                 </div>
             </div>
         ),
-        filterIcon: filtered =><SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />,
+        filterIcon: filtered =><Icon type="search" style={{ color: filtered ? '#1890ff' : undefined }} />,
         onFilter: (value, record) =>
             record[dataIndex]
                 ? record[dataIndex].toString().toLowerCase().includes(value.toLowerCase())
@@ -65,12 +63,7 @@ export default class FormTable extends Component{
         },
         render: text =>
             this.state.searchedColumn === dataIndex ? (
-                <Highlighter
-                    highlightStyle={{ fontWeight:'bold' }}
-                    searchWords={[this.state.searchText]}
-                    autoEscape
-                    textToHighlight={text ? text.toString() : ''}
-                />
+                text
             ) : (
                 text
             ),
